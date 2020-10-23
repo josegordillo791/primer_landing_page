@@ -10,7 +10,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- SCROLL REVEAL -->
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <!--   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>  
         <!-- NAVEGACIÓN -->
@@ -40,7 +41,7 @@
           <!-- CIERRE NAVEGACIÓN -->
           <!-- HEADER -->
           <div id="header">
-              <div class="conteiner mt-5">
+              <div class="container mt-5">
                   <div class="row">
                       <div class="col-md-6">
                             <div class="header-content-left">
@@ -64,7 +65,7 @@
            <!-- CIERRE HEADER -->
           <!-- TESTIMONIOS -->
             <section id="testimonial" class="mt-4 bg-dark text-white p-4">
-                <div class="conteiner mt-4 text-center">
+                <div class="container mt-4 text-center">
                     <p class="h2 mb-2">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti explicabo delectus magni aut quis nobis eveniet soluta impedit enim quisquam earum in, voluptate architecto ea minima iure assumenda dolorum facere.
                     </p>
@@ -78,12 +79,12 @@
             <div class="container mt-5">
               <div class="row">
                 <div class="col-md-6">
-                  <div class="info-left">
+                  <div class="info-left header-content-left">
                     <img src="img/image2.png" alt="smartphone" style="width: 100%">
                   </div>
                 </div>
                 <div class="col-md-6 my-auto">
-                  <div class="info-rigth">
+                  <div class="info-rigth header-content-rigth">
                     <h2>Lorem ipsum dolor sit.</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni iste doloribus, animi similique est nulla dolor voluptatibus corporis atque, voluptas aliquid adipisci</p>
                     <a href="#" class="btn btn-outline-secondary btn-lg mt-2">Leer más</a>
@@ -117,7 +118,7 @@
 
           <!-- FOOTER -->
           <footer id="contact">
-            <div class="container">
+            <div class="container container-footer" style="padding-top: 20px; padding-bottom: 20px; align-content: auto;">
             <div class="row mt-5">
               <div class="col-md-5">
                 <form class="card">
@@ -149,7 +150,54 @@
           <!-- boostrap4 Strips -->
         <src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></src=>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+          <!-- SCROLL REVEAL-->
+          <script>
+            /* window.sr=scrollReveal;
+            
+              sr.reveal('.navbar',{
+                duration : 2000,
+                origin : 'bottom'
+              }); */
+              ScrollReveal().reveal('.navbar', { 
+                duration : 2000,
+                origin : 'bottom',
+                distance: '150px'
+                });
 
+                ScrollReveal().reveal('.header-content-left', { 
+                duration : 2000,
+                origin : 'top',
+                distance: '300px'
+                });
+
+                ScrollReveal().reveal('.header-content-rigth', { 
+                duration : 2000,
+                origin : 'rigth',
+                distance: '300px'
+                });
+
+                ScrollReveal().reveal('.btn', { 
+                duration : 2000,
+                origin : 'top',
+                distance: '300px'
+                });
+                ScrollReveal().reveal('.container-footer', { 
+                duration : 2000,
+                origin : 'rigth',
+                distance: '300px'
+                });
+
+
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                  anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+        });
+    });
+});
+          </script>
+          <!-- FIN SCROLL REVEAL -->
      
 </body>
 </html>
